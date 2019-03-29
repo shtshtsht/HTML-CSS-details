@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			长度单位 
+				1、像素px
+					使用最多的单位。
+					屏幕的像素点数量。
+					不同屏幕像素点的大小有可能不同。视网膜屏像素点小很多。
+				2、百分比%
+					根据父元素计算自身的长度。
+					修改父元素尺寸，子元素跟随变化。
+					适用于自适应页面。
+				3、em
+					相对于当前元素的字体大小计算。
+					根据font-size值计算。
+					1em = 1倍 font-size
+					font-size=50px,则1em=50px
+					font-size变化，em随之改变。
+					适用于设置字体相关样式。
+				4、rem
+					相对于根元素html的字体大小计算
+			*/
+			.box{width: 200px;height: 200px;background: red;}
+			.box1{width: 75%;height: 75%;background: yellow;}
+			
+		   
+		</style>
+	</head>
+	<body>
+
+		<div class="box">
+			<div class="box1">
+				
+			</div>
+		</div>
+		
+	</body>
+</html>
