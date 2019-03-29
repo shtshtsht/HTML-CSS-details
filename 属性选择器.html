@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+		/* 
+		属性选择器
+			元素[属性]	选取含有这个属性的
+			元素[属性="属性值"]	选取完全匹配的
+			元素[属性^="开头字符串"]	选取以串开头的
+			元素[属性$="结尾字符串"]	选取以串结尾的
+			元素[属性*="子字符串"]	选取含有子串的
+		*/
+		p[title]{font-size: 50px;}
+		p[title="this"]{background-color: orange;}
+			
+		</style>
+	</head>
+	<body>
+			<!-- 
+				title属性 
+					可以给任何标签添加
+					内容是鼠标移入时的提示文字	
+			-->
+		<p title="这是提示">abcabcabcabcabcabc</p>
+		
+		<p title="this">abcabcabcabcabcabc</p>
+	</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 
+			CSS 层叠样式表
+			把多个样式写在一个表里面
+			网页是一个多层结构，表层的会覆盖底层的内容
+		 -->
+		 <!-- 
+			内联样式表：
+				写在元素的style属性中，仅对当前元素起作用。
+				结构和表现耦合，不方便维护。
+			
+			内部样式表：
+				写在head中的style标签里，对当前页面的元素有效。
+				通过选择器，对所选元素进行样式操作
+				结构和表现分离。
+			
+			外部样式表：
+				写在外部CSS文件中，使用link标签引入到当前页面。
+				href属性：CSS文件的路径
+				结构和表现【完全分离】
+				实现样式表复用
+				【关键】利用浏览器缓存，在访问多个共用CSS的网页时，能加快用户访问速度。
+				
+		  -->
+		 <style type="text/css">
+		 	p{color: red;}
+		 </style>
+		 <link rel="stylesheet" type="text/css" href="#"/>
+	</head>
+	<body>
+		<p style="color: blue; font-size: 50px;">这是一段文字，这里变了颜色</p>
+		<p></p>
+	</body>
+</html>

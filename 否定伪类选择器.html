@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			否定选择：
+				逻辑非
+				:not(选择器)
+				选中除了这个选择器之外的其他元素
+				通常从一类中排除一个子类或特例
+			*/
+			
+			/* 选中p中除class为ppt的之外的所有p */
+			p:not(.ppt){background: yellow;}
+			
+			/* 选中除id是good以外的 */
+			p:not(#good){color: red;}
+	
+		</style>
+	</head>
+	<body>
+		<p>标题</p>
+		<p id="good">标题</p>
+		<p>标题</p>
+		<p class="ppt">标题</p>
+		<p>标题</p>
+		<p>标题</p>
+		<p>标题</p>
+	</body>
+</html>

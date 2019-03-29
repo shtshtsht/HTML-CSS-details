@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			伪类选择器：
+				为处于特殊状态的元素设置样式
+				比如：未点击的超链接，已点击的超链接，获取焦点的文本框
+			
+			超链常用伪类
+				a:link 尚未访问链接，可设置字体、背景等
+				a:visited 已访问链接，仅可设置颜色
+				a:hover 鼠标移入链接，可设置其他属性
+				a:active 正在点击链接，可设置其他属性
+				
+			设四个伪类权重相同，所以靠后的起效。
+			一般顺序为 link visited hover active
+				
+			浏览器通过历史记录判断链接是否被访问过
+			
+			*/
+			
+			a:link{font-size: 50px;color: beige;background: pink;}
+			a:visited{color:gray;}
+			a:hover{color: #FFFF00;}
+			a:active{color: #8A2BE2;}
+			
+			
+			/* 
+				hover和active可以用于其他标签
+				ie6中仅支持设置超链接
+			*/
+			#p1:hover{color:red;background: yellow;}
+			#p1:active{font-size: 40px;}
+		   
+		   /* 
+			其他常用伪类：
+				:focus
+					获取焦点
+					ie6不支持
+				::selection
+					为选中的内容设置样式
+					注意，是两个冒号
+					ie6
+		   */
+			#txt:focus{background: #00FFFF;}
+			.choose::selection{background: orange;}
+		   
+		</style>
+	</head>
+	<body>
+		<a href="#">链接</a>
+			<br><br><br>
+		
+		<p id="p1">这里是个段落</p>
+		
+		<br><br><br><br><br>
+		
+		<input type="text" name="" id="txt" value="这是一个文本框" />
+		<br><br>
+		<p class="choose">看看选中了之后是什么样子</p>
+		
+	</body>
+</html>

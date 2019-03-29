@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+				祖先元素的样式，会被后代元素所继承
+				
+				通常把基本样式设置给祖先元素，让子孙元素继承
+				
+				并不是所有的样式都会被继承
+				如：背景、边框、定位等相关样式不会被继承
+				在手册中查询样式的继承性
+			*/
+			
+			/* 父元素p的字体大小，传递给了子元素span */
+			p{font-size: 50px;}
+			
+		</style>
+	</head>
+	<body>
+		<p>
+			p中的文字<br>
+			<span>p中的span</span>
+		</p>
+		<span>p外的span</span>
+	</body>
+</html>

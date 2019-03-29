@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			统一编号类查找
+				子元素的序号是统一排列的，
+				同层的不同种类子元素一起编号
+				:first-child{}
+				:last-child{}
+				:nth-child(序号){}找指定位置的子元素
+				:nth-child(odd/even){}
+				:nth-child(an+b){}以a为间隔，以b为起点
+			*/
+		   /* 
+			单独编号类查找
+				指定的一种子元素自己编号
+				:first-of-type{}
+				:last-of-type{}
+				:nth-of-type(){}同样可以有奇偶和等间隔
+		   */
+			
+			/* 第一个子元素，且该元素是p
+				显然在这里第一个子元素是span，这条设置无效
+			 */
+			p:first-child{color: red;}
+
+			/* 最后一个p 
+				？？？不知道这个last-child为啥不能用？？？
+			*/
+			p:last-child{color: red;}
+
+			/* 找第三个p 序号是3 且 是p*/
+			p:nth-child(3){color: red;}
+			
+			/* 等间隔查找 序号对 且 是p*/
+			p:nth-child(2n+3){background: yellow;}
+			
+			/* 单独查找p序号  */
+			p:first-of-type{background: pink;}
+			p:last-of-type{background: pink;}
+			p:nth-of-type(3){background: pink;}
+		</style>
+	</head>
+	<body>
+		<span>标签</span>
+		<p>这是一个标签</p>
+		<p>这是一个标签</p>
+		<p>这是一个标签</p>
+		<p>这是一个标签</p>
+		<p>这是一个标签</p>
+		<p>这是一个标签</p>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			伪元素：
+				表示元素内容的一些特殊位置
+			
+			常用伪元素：
+				:first-letter
+					第一个字符
+				:first-line
+					第一行
+				
+				:befor
+				:after
+					元素中第一个字符之前的内容/最后一个字符之后的内容
+					默认情况下,这两个位置什么都没有
+					通常结合content使用，向这两个位置添加内容
+					添加的内容在网页中无法被选中
+			*/
+			p{font-size: 50px;text-align: center;}
+			p:first-letter{background: red;}
+			p:first-line{background-color: #00FFFF;}
+			p:before{content: "这是头";color: #FFA500;font-size: 30px;}
+			/* 这里before中的字体、背景等设置存在浏览器兼容问题
+				本条before设置仅在ie中有效
+				ie中竟然可以选中这里添加的内容
+			*/
+			p:after{content: "这是尾";color: #FFC0CB;}
+			
+		</style>
+	</head>
+	<body>
+		<p class="choose">
+			看看选中了之后是什么样子<br>
+			看看选中了之后是什么样子<br>
+			看看选中了之后是什么样子<br>
+			看看选中了之后是什么样子<br>
+			看看选中了之后是什么样子<br>
+			看看选中了之后是什么样子<br>
+		</p>
+		
+	</body>
+</html>

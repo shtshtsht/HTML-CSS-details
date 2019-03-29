@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			相邻兄弟选择器：
+				A+B 选中B
+				A和B之间不能有任何其他东西
+				
+			后方所有兄弟选择器：
+				A~B 选中B
+				A之后所有的B，不管相邻不相邻
+			*/
+			/* 此时p与span中间隔了div，无法选到p */
+			span+p{background: yellow;}
+			
+			/* div和p相邻，p被选中*/
+			div+p{background: red;}
+			
+			/* span后所有p改文字颜色 */
+			span~p{color: #00FFFF;}
+			
+		</style>
+	</head>
+	<body>
+		<p>标题</p>
+		<p>标题</p>
+		<span>这个不是标题</span>
+		<div id=""></div>
+		<p>标题</p>
+		<p>标题</p>
+		<p>标题</p>
+		<p>标题</p>
+		<p>标题</p>
+	</body>
+</html>
