@@ -17,7 +17,7 @@
 					一般情况下，文字要比框小一点。
 					字体不同，文字和框的大小对比不同。有的可能比框大
 				*/
-				font-size: 20px;
+				font-size: 50px;
 				
 				
 				/* 
@@ -31,14 +31,63 @@
 					字体有没有，由客户计算机决定。在C盘fonts文件夹中查看
 					
 				*/
-				font-family: 华文彩云, arial;
+				font-family: 华文隶书, arial;
+				
+				
+				/* 
+				字体样式 font-style
+					1、normal，默认值，文字正常显示
+					2、italic，与i标签等效。
+					3、oblique，文字倾斜
+				通常情况下，italic和oblique效果相同。只用italic
+				 */
+				font-style: oblique;
+				
+				
+				/* 
+				文本粗细 font-weight
+					1、normal，默认值
+					2、bold，加粗显示
+				 */
+				font-weight: bold;
+				
+				
+				/* 
+				font-variant
+					1、normal，默认值
+					2、small-caps,小写字母变大写，
+						但是占的空间还是原来小写字母的小空间
+				 */
+				font-variant: small-caps;
 			}
+			
+			/* 
+			所有这些字体样式可以合并写在font中。用空格隔开
+			注意，这里合并的时font前缀样式，color不在其中。
+			
+			斜体 加粗 小型大写字母 三者可无序，可省略不写。
+			
+			文字大小和字体必须写，
+			字体必须是最后一个，大小必须是倒数第二个
+			
+			font合并样式比分开写具有更好的性能，因为浏览器会对每个样式做解析。
+			 */
+			.p2{
+				font: bold italic small-caps 40px 华文彩云;
+			}
+			
 		</style>
 		
 	</head>
 	<body>
 		<p class="p1">
 			这是一个独立的段落
+			ASDFasdf
+		</p>
+		
+		<p class="p2">
+			今天看起来要下雨了
+			ASDFasdf
 		</p>
 		
 	</body>

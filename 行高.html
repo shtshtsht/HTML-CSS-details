@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			行高,line-height
+				
+			行间距：
+				行间距,通过设置行高间接设置行间距。
+			垂直居中：
+				文字默认在行高中垂直居中显示
+				单行文本，将行高设置为与父元素高度一致，实现垂直居中
+				
+					1、像素数值px
+						行高小于文字大小，就会出现重叠
+					2、%
+						相对于字体大小的%数
+					3、数值
+						1相当于比例的100%，一倍
+						1.5即字体大小的1.5倍
+			 */
+			/* 
+			【注意】
+				在font中也可以设置行高，
+					font：20px/50px “宋体”;
+					其中20px为字体大小，/后的50px就是行高，
+					这里的行高可省略，使用默认值
+				如果line-height样式写在font样式之前，
+					line-height设置的行高会被覆盖
+			 */
+			
+			/* 设置行间距 */
+			.p1{
+				line-height: 50px;
+			}
+			
+			/* 文字垂直居中显示 */
+			div{
+				width: 300px;
+				height: 300px;
+				background: mediumspringgreen;
+			}
+			.p2{
+				line-height: 300px;
+			}
+					
+		</style>
+	</head>
+	<body>
+		<p class="p1">
+			这是一个独立的段落
+			ASDFasdf这是一个独立的段落ASDFasdf这是一个独立的段落ASDFasdf这是一个独立的段落
+			ASDFasdf这是一个独立的段落ASDFasdf这是一个独立的段落ASDFasdf这是一个独立的段落
+			ASDFasdf这是一个独立的段落ASDFasdf这是一个独立的段落ASDFasdf这是一个独立的段落
+			ASDFasdf这是一个独立的段落ASDFasdf这是一个独立的段落ASDFasdf这是一个独立的段落
+			ASDFasdf这是一个独立的段落ASDFasdf这是一个独立的段落ASDFasdf这是一个独立的段落
+			ASDFasdf
+		</p>
+		
+		<div id="" >
+			<p class="p2">
+			今天看起来要下雨了
+			</p>
+		</div>
+		
+	</body>
+</html>

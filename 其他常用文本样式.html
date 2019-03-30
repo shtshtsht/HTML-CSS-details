@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			text-transform	大小写相关设置
+				1、none，默认值，不做处理
+				2、capitalize，所有单词首字母大写
+				3、uppercase，所有字母都大写
+				4、lowercase，所有字母都小写
+			对中文没意义。
+			
+			text-decoration  文字装饰
+				1、none，默认值，无装饰效果
+				2、underline，添加下划线
+				3、overline，上划线
+				4、line-through，中间划线,删除线
+			常用于去掉超链接默认的下划线
+			
+			letter-spacing，字符间距
+				1、normal，默认，无额外空间
+				2、像素数值，可以是负值
+			中文就是字之间的距离
+			
+			word-spacing，设置词与词之间空格的大小
+				1、normal
+				2、像素数值，可以是负值
+			
+			text-align	设置文本的水平对齐方式
+				1、left，默认值，靠左对齐
+				2、right，右对齐
+				3、center，水平居中
+				4、justify，两端对齐，中间文字之间的空隙会被拉伸
+			
+			text-indent	首行缩进
+				1、像素值，
+					字体大小变化后会影响显示效果
+				2、em值（常用）
+					跟随字体大小自动变化
+			正值右移，负值左移。
+			左移可以隐藏不想显示的文字。
+			 */
+			
+			/* 去掉p1中超链接的默认下划线 */
+			.p1 a{
+				text-decoration: none;
+			}
+			
+			.p2{
+				text-transform: capitalize;
+				text-decoration:line-through;
+			}
+			
+			/* 字符间距和单词间距 */
+			.p3{
+				font-size: 40px;
+				letter-spacing: 10px;
+				word-spacing: -50px;
+			}
+			.p4{
+				text-indent: -5em;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<p class="p1">
+			<a href="#">ASDFASDFasdfasdfas</a>
+		</p>
+		<p class="p2">
+			as dfa sdf as
+		</p>
+		<p class="p3">
+			asdfs dfdfa gagas像素 数值，可以 是负值
+		</p>
+		<p class="p4">
+			是负值是负值是负值是负值是负值是负值是负值是负值是
+			负值是负值是负值是负值是负值是负值是负值是负值是负
+			值是负值是负值是负值是负值是负值是负值是负值是负值
+			是负值是负值是负值是负值是负值是负值是负值是负值是
+			负值是负值是负值是负值是负值是负值是负值是负值是负
+			值是负值是负值是负值是负值是负值是负值
+		</p>
+	</body>
+</html>
