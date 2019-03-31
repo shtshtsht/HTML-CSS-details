@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			渐变背景色，可以通过CSS实现
+			
+			也可以通过背景图片的repeat属性配合PS截图实现
+				截取一条像素水平平铺为背景图片即可
+			 */
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				list-style: none;
+				background-color: beige;
+				margin: 50px auto;
+				width: 300px;
+				overflow: hidden;
+				background-image: url(渐变导航条元素.jpg);
+				background-repeat:repeat-x;
+			}
+			li{
+				float: left;
+				width: 98px;
+				text-align: center;
+				line-height: 34px;
+				border-right: blue dashed 3px;
+			}
+			a{
+				width: 100%;
+				height: 100%;
+				display: block;
+				text-decoration: none;
+			}
+			a:hover{
+				background-color: red;
+			}
+			li.nav3{
+				border: none;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<ul>
+			<li class="nav1"><a href="#">电影</a></li>
+			<li class="nav2"><a href="#">电视剧</a></li>
+			<li class="nav3"><a href="#">公开课</a></li>
+		</ul>
+	</body>
+</html>

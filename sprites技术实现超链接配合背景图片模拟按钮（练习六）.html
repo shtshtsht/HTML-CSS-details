@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			/* 
+			设置超链接样式
+				把超链接的尺寸设置为图片大小
+				
+			一套按钮图片包括普通状态、鼠标移入状态和点击状态
+				使用hover、active伪类分别对应三张图片
+			当第一次触发时，存在闪烁现象。影响用户体验
+			
+			产生原因：
+				图片以外部资源型式加载入网页，
+				浏览器每加载一个外部资源就要单独发送一个请求。
+				浏览器会在使用资源时候才去加载。出现时间差
+			
+			解决方法：
+				sprites技术
+				把所有按钮状态的图片合并为一张图
+				当触发某种状态时，移动背景图片位置即可
+				这样图片在网页初始化时就完成了加载
+				不会再出现加载时的闪烁现象。
+				使用background-position属性移动得到对应子图片
+			
+			优点：
+				1、浏览器只需发送一个请求就能加载多个图片
+				2、通常情况下，合并后的图片比单独子图总和占用体积更小。
+			
+			 */
+			a{
+				display: block;
+				width: 179px;
+				height: 179px;
+				background-image: url(小.jpg);
+				background-color: #F5F5DC;
+				margin: 100px auto;
+				background-repeat: no-repeat;
+				background-position: -60px -60px;
+			}
+
+			
+		</style>
+	</head>
+	<body>
+		<!-- 给超链接设置背景图片 -->
+		<a href="#"></a>
+	</body>
+</html>
