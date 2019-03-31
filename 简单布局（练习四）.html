@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			通常设置字体统一为12px，并统一设置行高
+			 */
+			body{
+				font: 12px/1 "宋体";
+			}
+			/* 取消默认内外边距 */
+			*{
+				margin: 0px;
+				padding: 0px;
+			}
+			
+			/* 整体盒子 居中显示 设置个背景色便于观察 */
+			.box{
+				width: 300px;
+				
+
+				margin: 50px auto;
+			}
+			
+			/* 抬头部分 */
+			.header{
+				width: auto;
+				height: 47px;
+				border-top: green 3px solid;
+				background-color: gainsboro;
+				line-height: 47px;
+				padding: 0px 10px 0px 10px;
+			}
+				.header a{
+					float: right;
+					color: red;
+				}
+				.header h2{
+					float: left;
+				}
+				
+			/* 内容部分 */
+			.content{
+				border: solid #F5F5DC 3px;
+				padding: 0px 8px 0px 8px;
+				font-family: "宋体";
+				font-size: 12px;
+			}
+				.content a{
+					text-decoration: none;
+				}
+				ul{
+					list-style: none;
+					border-bottom: #000000 2px dashed;
+				}
+				li{
+					overflow: hidden;
+					margin-bottom: 12px;
+				}
+				.content .toright{
+					float: right;
+					color: #FF00FF;
+				}
+				.content .toleft{
+					float: left;
+				}
+				.content .lastul{
+					border-bottom: none;
+				}
+				.content h3{
+					margin-top: 16px;
+					margin-bottom: 10px;
+				}
+				.content a:hover{
+					color: red;
+					text-decoration: underline;
+				}
+			
+		</style>
+	</head>
+	<body>
+		<!-- 整体是个盒子 宽300px 高500px -->
+		<div id="" class="box">
+			<!-- 分为两部分 header 和 content -->
+			<!-- header 高度50px 宽度跟随父元素 -->
+			<div id="" class="header">
+				<h2>我是标题</h2>
+				<a href="#">点击查看</a>
+			</div>
+			
+			<!-- content -->
+			<div id="" class="content">
+				<h3>第一个小标题</h3>
+					<ul>
+						<li>
+							<a href="#" class="toleft"><span>第1条新闻</span></a>
+							<a href="#" class="toright"><span>点击查看</span></a>
+						</li>
+						<li>
+							<a href="#" class="toleft"><span>第2条新闻</span></a>
+							<a href="#" class="toright"><span>点击查看</span></a>
+						</li>
+						<li>
+							<a href="#" class="toleft"><span>第3条新闻</span></a>
+							<a href="#" class="toright"><span>点击查看</span></a>
+						</li>
+						<li>
+							<a href="#" class="toleft"><span>第4条新闻</span></a>
+							<a href="#" class="toright"><span>点击查看</span></a>
+						</li>
+					</ul>
+				<h3>第二个小标题</h3>
+					<ul>
+						<li>
+							<a href="#" class="toleft"><span>第1条新闻</span></a>
+							<a href="#" class="toright"><span>点击查看</span></a>
+						</li>
+						<li>
+							<a href="#" class="toleft"><span>第2条新闻</span></a>
+							<a href="#" class="toright"><span>点击查看</span></a>
+						</li>
+						<li>
+							<a href="#" class="toleft"><span>第3条新闻</span></a>
+							<a href="#" class="toright"><span>点击查看</span></a>
+						</li>
+						<li>
+							<a href="#" class="toleft"><span>第4条新闻</span></a>
+							<a href="#" class="toright"><span>点击查看</span></a>
+						</li>
+					</ul>
+				<h3>第三个小标题</h3>
+					<ul class="lastul">
+						<li>
+							<a href="#" class="toleft"><span>第1条新闻</span></a>
+							<a href="#" class="toright"><span>点击查看</span></a>
+						</li>
+						<li>
+							<a href="#" class="toleft"><span>第2条新闻</span></a>
+							<a href="#" class="toright"><span>点击查看</span></a>
+						</li>
+						<li>
+							<a href="#" class="toleft"><span>第3条新闻</span></a>
+							<a href="#" class="toright"><span>点击查看</span></a>
+						</li>
+						<li>
+							<a href="#" class="toleft"><span>第4条新闻</span></a>
+							<a href="#" class="toright"><span>点击查看</span></a>
+						</li>
+					</ul>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>

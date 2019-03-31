@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			a{
+				background: green;
+				
+				/* 
+				display 块和内联之间的转换
+					1、inline：
+						转换为内联元素
+					2、block：
+						转换为块元素
+					3、inline-block：
+						转为行内块元素
+						支持宽高，但不独占一行
+						img默认为inline-block
+					4、none
+						取消元素显示，该元素的页面结构也不起效果。
+						不显示，不占位
+						
+				visibility 可见性
+					不显示，但页面结构保留
+					不显示，占位
+				 */
+				display: block;
+				
+				width: 100px;
+				height: 100px;
+			}
+			
+			div{
+				visibility: hidden;
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#">这里是一个超链接</a>
+		<div id="" style="width: 100px; height: 100px; background-color: red;">
+			
+		</div>
+		<p>asdfasdfasdf</p>
+	</body>
+</html>

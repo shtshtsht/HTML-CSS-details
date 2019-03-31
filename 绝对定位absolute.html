@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			position 定位
+				1、static：
+					默认值，没开启定位
+				2、relative：
+					开启相对定位
+				3、absolute：
+					开启绝对定位
+				4、fixed：
+					开启固定定位
+			
+			absolute：绝对定位
+				1、开启绝对定位，【元素会脱离文档流】
+				2、不设置偏移量，则元素位置不会变
+				3、相对于，离他最近的，开启了定位的祖先元素，进行定位。
+					如果所有祖先元素都没有开启定位，则相对于浏览器窗口进行定位
+					通常，开启子元素absolute时，开启父元素的relative
+				4、绝对定位会提高元素的显示优先级
+				5、会改变元素的性质，inline元素变为block元素
+					block元素的宽/高如果不设置，默认被内容撑开
+			 */
+			.box1{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				position: absolute;
+				left: 50px;
+				top: 50px;
+			}
+			.box3{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+			}
+			.box4{
+				width: 300px;
+				height: 300px;
+				background-color: yellow;
+				/* 开启box4的相对定位 */
+				/* position: relative; */
+			}
+			span{
+				position: absolute;
+				width: 100px;
+				height: 100px;
+				background-color: #FF00FF;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box4">
+			<div class="box2"></div>
+		</div>
+		<div class="box3"></div>
+		<span>这是一个span标签</span>
+	</body>
+</html>

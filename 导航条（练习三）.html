@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 设置导航条的表现 */
+			/* 清除默认样式 */
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			ul{
+				/* 清除无序列表项目符号 */
+				list-style: none;
+				/* 设置导航条宽度 */
+				background-color: yellowgreen;
+				width: 400px;
+				/* 居中显示 */
+				margin: 50px auto;
+				/* 消除高度塌陷 */
+				overflow: hidden;
+			}
+			
+			li{
+				/* 设置浮动，实现横向排列 会引起高度塌陷 需要在父元素中解决塌陷 */
+				float: left;
+				/* 设置li宽度 */
+				width: 25%;
+			}
+			
+			a{
+				/* 设置超链接的宽度，因为a是内联元素，所以需要先转为行内块元素 */
+				display: inline-block;
+				/* 设置宽度 */
+				width: 100%;
+				/* 文字居中 */
+				text-align: center;
+				/* 设置上下padding */
+				padding: 5px 0;
+				/* 去除下划线 */
+				text-decoration: none;
+				/* 设置字体 */
+				color: white;
+				font-weight: bold;
+			}
+			
+			a:hover{
+				/* 设置鼠标移入效果 */
+				background: #FF4500;
+			}
+			
+		</style>
+	</head>
+	<body>
+		
+		<!-- 创建导航条结构 常用无序列表实现 -->
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">新闻</a></li>
+			<li><a href="#">体育</a></li>
+			<li><a href="#">生活</a></li>
+		</ul>
+		
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			opacity 设置元素透明
+				0-1之间的值
+				0为完全透明，1为不透明
+			ie6【支持】opacity
+			ie8不支持opacity
+			
+			ie8的透明方法：
+			filter：alpha(opacity=30);
+			这里数值为0-100之间。
+				0为完全透明，100为不透明
+			
+				
+			 */
+			.box1{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				position: relative;
+				z-index: 5;
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				position: absolute;	
+				left: 100px;
+				top: 100px;
+				z-index: 1;
+			}
+			.box3{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+				position: absolute;
+				top: 200px;
+				left: 200px;
+				z-index: 8;
+				opacity: 0.5;
+			}
+			
+			.box4{
+				width: 300px;
+				height: 300px;
+				background-color: skyblue;
+				position: relative;
+				z-index: 6;
+				opacity: 0.6;
+			}
+			.box5{
+				width: 100px;
+				height: 100px;
+				background-color: gold;
+				position: absolute;
+				z-index: 1;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4">
+			<div class="box5"></div>
+		</div>
+	</body>
+</html>

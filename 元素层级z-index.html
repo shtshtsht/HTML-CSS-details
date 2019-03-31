@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			z-index
+			元素层级（显示优先级）
+				1、如果元素层级相同，则html中后面的元素会遮挡前面的元素
+				2、z-index数值越大，层级越高.数值为大于0的整数
+					没有开启定位的元素，不能使用z-index
+				3、同层子元素之间可以相互覆盖
+					父元素的z-index值再大也不会覆盖子元素。
+			 */
+			.box1{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				position: relative;
+				z-index: 5;
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				position: absolute;	
+				left: 100px;
+				top: 100px;
+				z-index: 1;
+			}
+			.box3{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+				position: relative;
+			}
+			
+			.box4{
+				width: 300px;
+				height: 300px;
+				background-color: skyblue;
+				position: relative;
+				z-index: 50;
+			}
+			.box5{
+				width: 100px;
+				height: 100px;
+				background-color: gold;
+				position: absolute;
+				z-index: 1;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+		<div class="box4">
+			<div class="box5"></div>
+		</div>
+	</body>
+</html>

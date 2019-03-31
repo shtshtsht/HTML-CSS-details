@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			文档流中，父元素的height被子元素撑开
+			
+			高度塌陷
+				当子元素float浮动之后，不会再撑开父元素的height
+				父元素高度塌陷，影响页面整体布局结构
+			
+			BFC：(ie6不支持)
+				W3C标准中，每个元素都有一个隐含属性Block Formatting Context
+				简称BFC，块级格式化上下文
+				该属性可以设置打开或关闭，默认关闭
+				BFC开启后，元素将会具有如下特性：
+					1、父元素的垂直外边距不会和子元素重叠
+					2、开启BFC的元素，不会被float元素覆盖，会类似float效果排布
+					3、开启BFC的元素，可以包含子元素，即height可以被子元素撑开
+			
+			开启BFC的方法：
+				1、设置元素浮动
+					宽度丢失，
+					且影响整体布局
+				2、设置元素绝对定位
+				3、设置元素display为inline-block
+					宽度会丢失
+				4、设置overflow为（非visible）
+					visible是默认值，修改为其他即可
+
+			解决塌陷方法：
+				1、父元素，设置overflow为（非visible）
+					通常使用hidden或auto
+					（有相对定位的子元素时会出问题）
+				2、给父元素添加一个空的块元素，（html添加）
+					把这个空的子元素设置clear：both；
+					添加了无意义的结构，用于处理表现问题。（表现和结构耦合）
+					w3c推荐
+				3、给父元素添加一个空的块元素，（CSS添加，通过after伪类）
+					content设置为空串“”
+					display设置为block
+					clear：both
+					最好的方法（ie6不支持after伪类）
+				
+			 */
+			.b1{
+				border: 5px dashed red;
+				/* overflow: hidden; */
+			}
+			.b1:after{
+				content: "";/* 空串 */
+				display: block;
+				clear: both;
+			}
+			
+			.b2{
+				width: 100px;
+				height: 100px;
+				background-color: #FFE4C4;
+				float: left;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="" class="b1">
+			<div id="" class="b2">
+				
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			position 定位
+				1、static：
+					默认值，没开启定位
+				2、relative：
+					开启相对定位
+				3、absolute：
+					开启绝对定位
+				4、fixed：
+					开启固定定位
+			
+			relateive：相对定位
+				1、当开启相对定位，但不设置偏移量，则不会产生任何位移
+				2、开启定位后，可以通过left，right，top，bottom设置偏移量
+					可以是负值。
+				3、相对于自身static状态位置进行移动。	
+					相对定位的元素不会脱离文档流，
+					原始占位还存在，只是显示位置改变。
+				4、开启相对定位，显示优先级被提高
+				5、相对定位不会改变block和inline性质
+				
+			通常情况下，只需要使用两个偏移量
+			 */
+			.box1{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+			.box2{
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				position: relative;
+				left: 100px;
+				top: -200px;
+			}
+			.box3{
+				width: 200px;
+				height: 200px;
+				background-color: blue;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box1"></div>
+		<div class="box2"></div>
+		<div class="box3"></div>
+	</body>
+</html>

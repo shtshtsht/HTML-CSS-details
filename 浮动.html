@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			/* 
+			div 块元素 独占一行 默认自上而下排列
+			
+			display：inline-block
+				可以让块元素在一行中显示，
+				但是，html文档中各块元素之间的，空格，也会显示出来
+				如果不想要空白，需要手动调整html标签书写方式。
+			
+			float 浮动
+				1、使元素脱离文档流，实现块元素的水平排列
+				2、浮动出去的块元素不再占有原来的位置，
+					原来处于其下方的块元素会上移填补它的空缺
+				3、浮动的元素具有较高的显示优先级，
+					若与普通块元素重叠，则会遮挡普通块元素
+				4、同层子元素，浮动后依然同层。
+				5、浮动的起始位置为上一个文档流元素的下边界，
+					如果没有上一个文档流元素，则为父元素的content边界
+				6、一行浮动块的整体行高度为行中浮动块的最大高度
+					当多个浮动块撑满浏览器宽度时，发生换行，
+					换行后浮动块的起始边界为上一行最高元素的下边界。
+				7、同为浮动块，html书写顺序在后的，
+					其显示位置不会高于书写在前的浮动块。
+				8、文字不会被float块遮挡
+					文字会自动环绕在float块周围，出现文字环绕效果。
+				9、块元素float后的width/height变化
+					文档流中，块元素的width默认auto，100%父元素content宽度；height默认被内容撑开
+					float之后，width和height默认都被内容撑开
+				10、内联元素float后的width/height变化
+					会变成float块元素，width/height默认被内容撑开
+				
+			float 属性值：
+				1、none
+					默认值
+					不浮动，不脱离文档流
+				2、left
+					脱离文档流
+					向左测浮动
+				3、right
+					脱离文档流
+					向右侧浮动
+
+			clear：
+				消除其他元素float对【当前元素】的影响
+				1、none：默认值，不消除
+				2、left：消除左侧float元素的影响
+				3、right：消除右侧float元素的影响
+				4、both：消除左右两侧的影响
+
+			 */
+			
+			/* 浮动出现换行，浮动行的height为行中最高的高度 */
+			/* div{
+				float: left;
+			} */
+			
+			/* 浮动块 遮挡 普通块 */
+			/* #b2{
+				float: left;
+			} */
+			
+			/* 浮动起始边界，为上一个文档流元素的边界 */
+			/* #b1{
+				float: left;
+			} */
+			
+			/* 文字不会被float块遮挡 出现文字环绕效果 */
+			#b1{
+				float:left;
+			}
+			
+			/* clear消除b1对b2的影响 */
+			#b2{
+				clear: both;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<p style="background-color: blue;color: white;">this is a p tag</p>
+		<div id="b1" style="width: 100px;height: 100px; background-color: red;">
+			
+		</div>
+		<div id="b2" style="width: 200px;height: 200px; background-color: orange;">
+			<p>《狂人日记》是鲁迅创作的第一个短篇白话日记体小说，
+				也是中国第一部现代白话文小说，写于1918年4月。
+				该文首发于1918年5月15日4卷5号的《新青年》月刊，
+				后收入《呐喊》集，编入《鲁迅全集》第一卷。
+				《狂人日记》是鲁迅创作的第一个短篇白话日记体小说，
+				也是中国第一部现代白话文小说，写于1918年4月。
+				该文首发于1918年5月15日4卷5号的《新青年》月刊，
+				后收入《呐喊》集，编入《鲁迅全集》第一卷。
+			</p>
+		</div>
+		<div id="b3" style="width: 300px;height: 300px; background-color: yellow;">
+			
+		</div>
+		<div id="b22" style="width: 200px;height: 200px; background-color: orange;">
+			
+		</div>
+		
+		<div id="b4" style="width: 400px;height: 400px; background-color: green;">
+			
+		</div>
+		<div id="b5" style="width: 500px;height: 500px; background-color: cyan;">
+			
+		</div>
+		<div id="b6" style="width: 600px;height: 600px; background-color: mediumpurple;">
+			
+		</div>
+	</body>
+</html>
