@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			span{
+				/* 
+				内联元素（行内元素）盒子模型
+				
+					1、width height
+						无法设置宽、高
+					2、padding
+						水平方向padding有效
+						竖直方向padding不会影响页面布局，
+						不会挤走相邻行，
+						会遮挡相邻行元素
+					3、border
+						水平方向border有效
+						竖直方向和padding效果一样
+						不会影响页面布局
+					4、margin
+						水平方向margin有效，多个相邻则相加
+						没有竖直方向margin
+				 */
+				background-color:red;
+				padding-bottom: 20px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<span id="s1">
+			这里是一个span
+		</span>
+		<span id="s2">
+			这里是一个span
+		</span>
+		<div id="box1" style="background-color: yellow; width: 100px;height: 100px;">
+			
+		</div>
+	</body>
+</html>
