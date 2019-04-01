@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 
+		ie6中，
+			png24图片的透明效果无法正常显示
+			png8的透明效果正常
+			
+		1、在PS里面，文件存储为web所用格式，转为png8格式即可
+			但是，转为png8之后会降低图片清晰度，出现锯齿状边缘
+			
+		2、JS解决该问题，
+			向页面中引入外部JS文件进行处理
+			DD_belatedPNG
+			CSS代码压缩后，把空格和换行都去掉了，代码变为一行
+			项目上线通常使用压缩版本CSS代码。压缩后体积更小
+			
+		通常在body的最后引入外部JS代码
+			src中为外部引入代码的地址
+		 -->
+		<script type="text/javascript" src="DD_belatedPNG的地址" >
+		</script>
+		
+		<script type="text/javascript">
+			DD_belatedPNG.fix("选择器，要修复哪个就选哪个");
+		</script>
+		
+	</body>
+</html>

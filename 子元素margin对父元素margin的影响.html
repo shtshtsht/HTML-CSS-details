@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			.b1{
+				width: 300px;
+				height: 300px;
+				background-color: yellow;
+			}
+			/* 使用伪元素before添加空table标签 隔离父子元素margin */
+			.b1:before{
+				content: "";
+				display: table;
+			}
+			.b2{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				/* 
+				子元素的margin和父元素的margin相邻，
+				竖直方向相邻取最大值，导致父元素移位
+				 */
+				margin-top: 100px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="b1">
+		<!-- 使用空table 可以隔离父子元素的外边距 防止重叠 
+		但是，如果table写在html中会改变网页结构，
+		所以使用css中before伪元素添加table标签
+		-->	
+			<!-- <table></table> -->
+			<div class="b2">
+				
+			</div>
+		</div>
+	</body>
+</html>

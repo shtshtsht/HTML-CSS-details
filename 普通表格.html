@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			table{
+				width: 300px;
+				margin: 100px auto;
+				
+				/* CSS实现表格边框效果 */
+				/* border: solid black 1px; */
+				
+				/* 调整table和td边框之间的距离 */
+				/* border-spacing: 0px; */
+				
+				/* 边框合并 如果设置边框合并，border-spacing自动生效 */
+				border-collapse: collapse;
+				/* 
+					CSS实现表格边框效果，
+					只需要table设置collapse
+					td设置border即可实现
+				 */
+			}
+			td,th{
+				border: solid black 1px;
+			}
+			/* 为了使长表格便于查看，使用 :nth-of-type() 设置背景色 */
+			tr:nth-of-type(even){
+				background-color: blanchedalmond;
+			}
+			/* 鼠标移入行 高亮显示 */
+			tr:hover{
+				background-color: aqua;
+			}
+			
+			
+		</style>
+	</head>
+	<body>
+		<!-- 
+		<table> 表格标签 块元素
+			tr：行
+			td：列
+			th：表头行通常使用th，默认居中、加粗
+			
+		<table border="" cellspacing="" cellpadding="">
+		border：表格外边框
+		cellspacing：外边框到单元格边框之间的距离，单元格之间的距离。
+		cellpadding：单元格边框到内容的内边距
+		【注意】这些样式，通常用CSS实现
+		
+		使用 colspan列 和 rowspan行 设置合并单元格
+		通常写在html中
+		 -->
+		<table >
+			<tr>
+				<th>学号</th>
+				<th>姓名</th>
+				<th>性别</th>
+				<th>住址</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>孙悟空</td>
+				<td>男</td>
+				<td>花果山</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>猪八戒</td>
+				<td>男</td>
+				<td>高老庄</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>沙和尚</td>
+				<td>男</td>
+				<td>流沙河</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>孙悟空</td>
+				<td>男</td>
+				<td>花果山</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>猪八戒</td>
+				<td>男</td>
+				<td>高老庄</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>沙和尚</td>
+				<td>男</td>
+				<td>流沙河</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>猪八戒</td>
+				<td>男</td>
+				<td rowspan="2">高老庄</td>
+			</tr>
+			<tr>
+				<td colspan="2">沙和尚</td>
+				<td>男</td>
+			</tr>
+		</table>
+	</body>
+</html>

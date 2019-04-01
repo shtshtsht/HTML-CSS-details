@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	
+		<!-- 
+		框架集
+			和内联框架类似，在一个页面中引入外部页面
+			框架集可以引入多个页面，内联框架只能引入一个页面
+		
+		H5标准中推荐使用框架集，不推荐内联框架
+			
+		frameset标签创建框架集
+			不能和body出现在同一个页面中
+			frameset可与嵌套frameset
+			
+		显然没有body的页面，不能书写html结构
+		
+		frameset 和 iframe 中的内容都不会被搜索引擎检索
+			引入几个页面，浏览器就需要发送几次请求，影响用户体验
+		
+		-->
+	<frameset cols="30%,30%,40%">
+		<!-- 
+		frame子标签
+			指定要引入的页面 自结束标签 
+			
+		src属性
+			指向要引入的页面地址
+			
+			引入介个页面就写几个frame
+		
+		rows属性	
+			指定引入框架的排列方式
+			一行一行排列
+		cols属性
+			一列一列排列
+		rows和cols必须选择一个，
+			并且要对每一个frame所占大小进行赋值
+			逗号隔开
+			*表示按比例自动排列
+		
+		-->
+		<frame src="普通表格.html" >
+		<frame src="表单.html" >
+		<frameset rows="*,*">
+			<frame src="长表格.html" >
+			<frame src="子元素margin对父元素margin的影响.html" >
+		</frameset>
+	</frameset>	
+		
+		
+		
+	
+</html>

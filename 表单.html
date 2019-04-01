@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<!-- 
+		表单 form
+			作用：把用户输入信息提交给服务器
+		
+		action属性
+			必须存在，指向目标服务器地址
+
+		 -->
+		 
+		 <form action="" method="">
+		 	<!-- 
+			input标签 添加表单项 line-block元素
+				1、name属性
+					name存在才可实现提交，代表提交内容的名字
+					可以有多个name，每个name对应的内容都会被提交
+				2、value属性
+					对于文本显示类标签，初始显示内容，即默认值
+					对于选择类标签，value值为选中时提交的值
+				3、checked属性
+					单选，多选标签，默认值
+				4、selected
+					下拉列表中设置默认值
+			 -->
+			
+			<span>用户名</span>
+			<input type="text" name="username" />
+			<span>密码</span>
+			<input type="password" name="psd" />
+			<input type="submit"  value="提交" />
+			<input type="reset"  value="重置" />
+			<br><br>
+			
+			<!-- 
+			单选 radio
+				通过name进行分组，name相同为一组
+				这种不需要用户填写内容的表单项，还必须有value属性
+				被选中的表单项的value属性值被提交给服务器
+			 -->
+			性别<input type="radio" name="gender"  value="male" />男
+			<input type="radio" name="gender"  value="female" checked="checked" />女
+			<br><br>
+			
+			<!-- 
+			多选 checkbox
+				通过name进行分组，name相同为一组
+				还必须有value属性
+				被选中的表单项的value属性值被提交给服务器
+			 -->
+			爱好<input type="checkbox" name="hobby" id="" value="football" />足球
+			<input type="checkbox" name="hobby" id="" value="basketball" />篮球
+			<input type="checkbox" name="hobby" id="" value="volleyball" checked="checked" />排球
+			<br><br>
+			
+			<!-- 
+			select标签 下拉列表
+				option标签 列表项
+			
+			name属性指定给select
+			value属性指定给option
+			
+			select标签的multiple属性
+				使下拉列表变为多选
+			
+			optgroup标签可以给option标签进行分组
+				optgroup中label属性，给分组添加组名
+			
+			 -->
+			<select name="star" multiple="multiple">
+				喜欢的明星
+				<optgroup label="西游记">
+					<option value ="swk">孙悟空</option>
+					<option value ="zbj">猪八戒</option>
+					<option value ="shs" selected="selected">沙和尚</option>
+				</optgroup>
+				<optgroup label="水浒传">
+					<option value ="cj">柴进</option>
+					<option value ="lc">林冲</option>
+					<option value ="sj">宋江</option>
+				</optgroup>
+			</select>
+			<br><br>
+			
+			<!-- 
+			textarea 多行文本
+				必须name才能提交
+			
+			rows="" cols=""设置宽高，不好用，通常使用CSS设置
+			 -->
+			自我介绍
+			<textarea style="width: 100px; height: 50px;" name="info">
+				
+			</textarea>
+			<br><br>
+			
+			<!-- input出来的button 和 直接的 button 效果相同
+			 button创建的可以设置type
+			 通常使用button
+			 -->
+			<button type="button">这里是名字</button>
+			<input type="button" name="" id="" value="一样" />
+			<br><br>
+			
+			<!-- 
+			label标签
+				用于书写提示信息
+				通常用于设置统一字体
+				
+			label还有for属性
+				for的值为某一表单项的id值
+				用于点击时的绑定，点击文字就能选中元素
+			-->
+			<label for="aa">点这里试试</label>
+			<input type="text" name="" id="aa" value="" />
+			<br><br>
+			
+			<!-- 
+			fieldset标签
+				给表单项分组，
+				分组后会出现一个框框把组内表单项包围起来
+			
+			legend标签，设置组名
+			
+			-->
+			<fieldset id="">
+				<legend>用户信息</legend>
+				<span>用户名</span>
+				<input type="text" name="username" />
+				<span>密码</span>
+				<input type="password" name="psd" />
+				<input type="submit"  value="提交" />
+				<input type="reset"  value="重置" />
+			</fieldset>
+			<fieldset id="">
+				<legend>爱好</legend>
+				爱好<input type="checkbox" name="hobby" id="" value="football" />足球
+				<input type="checkbox" name="hobby" id="" value="basketball" />篮球
+				<input type="checkbox" name="hobby" id="" value="volleyball" checked="checked" />排球
+			</fieldset>
+			
+		 </form>
+	</body>
+</html>
