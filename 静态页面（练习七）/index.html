@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!-- 引入reset.CSS清除浏览器默认样式 -->
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<!-- 引入自己编写的CSS样式表 -->
+		<link rel="stylesheet" type="text/css" href="css/page-index.css"/>
+	</head>
+	<body>
+		<!-- 命名规范 id class 文件名 -->
+		<!--驼峰命名法 或 aaa_bbb_ccc 或 aaa-bbb-ccc -->
+		
+		<!-- 头部div header -->
+		<div class="header pageWidth">
+			
+			<!-- 导航条 -->
+			<ul class="nav">
+				<li>
+					<a href="#">HOME</a>
+					<p>back to home</p>
+				</li>
+				<li>
+					<a href="#">PRODUCTS</a>
+					<p>what we have for you</p>
+				</li>
+				<li>
+					<a href="#">SERVICES</a>
+					<p>things we do</p>
+				</li>
+				<li>
+					<a href="#">BLOG</a>
+					<p>follow us</p>
+				</li>
+				<li>
+					<a href="#">CONTACT</a>
+					<p>contact us</p>
+				</li>
+			</ul>
+			
+			<!-- logo -->
+			<div class="logo" title="返回主页">
+				<!-- logo通常是超链接 -->
+				<a href="#">
+					<img src="img/logo.png" alt="网站logo" >
+				</a>
+			</div>
+		</div>
+		
+		<!-- banner -->
+		<div class="banner pageWidth">
+			<!-- banner图片 -->
+			<img src="img/banner.jpg" alt="这是banner图片" >
+			
+			<!-- 图片切换按钮 -->
+			<div class="pointerDiv">
+				<a href="#"></a>
+				<a href="#" class="actived"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+				<a href="#"></a>
+			</div>
+		</div>
+		
+		<!-- content -->
+		<div class="content pageWidth clearfix">
+			<!-- 标题 -->
+			<h1>CSS padding 属性定义元素的内边距</h1>
+			<!-- 三个横向div -->
+			<div class="pl">
+				<h2>perfect logic</h2>
+				<h3>all all all</h3>
+				<div class="imgDiv">
+					<img src="img/content_pic.jpg" alt="第一个图" >
+				</div>
+				<p>
+					padding-top: 10px;padding-right: 0.25em;
+					padding-right: 0.25em;padding-right: 0.25em;
+					padding-bottom: 2ex;padding-right: 0.25em;
+					padding-left: 20%;padding-right: 0.25em;
+				</p>
+				<a href="#" class="lm"></a>
+			</div>
+			<div class="cs">
+				<h2>compute solution</h2>
+				<h3>all all all</h3>
+				<div class="imgDiv">
+					<img src="img/pic2.jpg" alt="第2个图" >
+				</div>
+				<p>
+					padding-top: 10px;padding-right: 0.25em;
+					padding-right: 0.25em;padding-right: 0.25em;
+					padding-bottom: 2ex;padding-right: 0.25em;
+					padding-left: 20%;padding-right: 0.25em;
+				</p>
+				<a href="#" class="lm"></a>
+			</div>
+			<div class="uc">
+				<h2>uber culter</h2>
+				<h3>all all all</h3>
+				<div class="imgDiv">
+					<img src="img/pic3.jpg" alt="第3个图" >
+				</div>
+				<p>
+					padding-top: 10px;padding-right: 0.25em;
+					padding-right: 0.25em;padding-right: 0.25em;
+					padding-bottom: 2ex;padding-right: 0.25em;
+					padding-left: 20%;padding-right: 0.25em;
+				</p>
+				<a href="#" class="lm"></a>
+			</div>
+		</div>
+	</body>
+</html>
