@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<!-- 引入reset.css 清除浏览器默认样式 -->
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<!-- 结构和表现分离，引用外部css -->
+		<link rel="stylesheet" type="text/css" href="css/page_index.css"/>
+	</head>
+	<body>
+		<!-- header -->
+		<div class="header w">
+			<!-- 网页logo -->
+			<div class="logo">
+				<!-- 导航条，通常使用ul -->
+				<ul class="nav">
+					<li>
+						<!-- ps中 T选取文字 或者选中图层复制文字内容 -->
+						<a href="#">HOME</a>
+						<p>Back to home</p>
+					</li>
+					<li>
+						<a href="#">PRODUCTS</a>
+						<p>What we have for you</p>
+					</li>
+					<li>
+						<a href="#">SERVICES</a>
+						<p>Things we do</p>
+					</li>
+					<li>
+						<a href="#">BLOG</a>
+						<p>Follow our updates</p>
+					</li>
+					<li>
+						<a href="#">CONTACT</a>
+						<p>Ways to reach us</p>
+					</li>
+				</ul>
+				<!-- logo通常可点击，使用超链接图片 -->
+				<a href="#" title="返回主页">
+					<!-- ps中开启自动选择并选定图层，拖拽辅助线，可以自动吸附选中图层的边缘
+					切图通常不需要背景，所以选中背景取消可视后再进行切图
+					-->
+					<img src="img/logo.png" >
+				</a>
+			</div>
+			
+		</div>
+		<!-- header 结束 -->
+		
+		<!-- banner -->
+		<div class="banner w">
+			<!-- banner有滑动效果，需要多张图片，通常设置单独图片子文件夹 -->
+			<img src="img/banner/banner01.png" >
+			<!-- 图片切换按钮 -->
+			<div class="pointerDiv">
+				<a href="#">
+					
+				</a>
+				<a href="#" class="active">
+					
+				</a>
+				<a href="#">
+					
+				</a>
+				<a href="#">
+					
+				</a>
+				<a href="#">
+					
+				</a>
+			</div>
+		</div>
+		<!-- banner 结束 -->
+	
+		<!-- content -->
+		<div class="content w clearfix">
+			<!-- 标题 -->
+			<h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h1>
+			<!-- 三个竖列子内容div -->
+			<div class="left">
+				<!-- 小标题 -->
+				<h2>Perfect Logic</h2>
+				<h3>All you want your website to do</h3>
+				<!-- 图片div -->
+				<div class="imgDiv">
+					<img src="img/contentPic/p1.jpg" alt="这是图">
+				</div>
+				<!-- 介绍文字 -->
+				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+				<!-- 超链接模拟按钮 -->
+				<a class="aBtn" href="">Learn More</a>
+			</div>
+			<div class="middle">
+				<!-- 小标题 -->
+				<h2>Complete Solution</h2>
+				<h3>A tool anything and everything you can think</h3>
+				<!-- 图片div -->
+				<div class="imgDiv">
+					<img src="img/contentPic/p2.jpg" alt="这是图">
+				</div>
+				<!-- 介绍文字 -->
+				<p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciun tdolore magnam aliquam quaerat voluptatem.</p>
+				<!-- 超链接模拟按钮 -->
+				<a class="aBtn" href="">Learn More</a>
+			</div>
+			<div class="right">
+				<!-- 小标题 -->
+				<h2>Uber Culture</h2>
+				<h3>Fresh. Modern and ready for future</h3>
+				<!-- 图片div -->
+				<div class="imgDiv">
+					<img src="img/contentPic/p3.jpg" alt="这是图">
+				</div>
+				<!-- 介绍文字 -->
+				<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+				<!-- 超链接模拟按钮 -->
+				<a class="aBtn" href="">Learn More</a>
+			</div>
+		</div>
+		<!-- content 结束 -->
+		
+		<!-- contact -->
+		<div class="contact w clearfix">
+			<!-- 三栏div -->
+			<div class="left">
+				<h2>Social Connection</h2>
+				<!-- 文字内容 -->
+				<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+				<!-- 小图标超链接 -->
+				<div class="icon">
+					<a href="#">
+						<img src="img/rss.png" >
+					</a>
+					<a href="#">
+						<img src="img/fb.png" >
+					</a>
+					<a href="#">
+						<img src="img/in.png" >
+					</a>
+					<a href="#">
+						<img src="img/yt.png" >
+					</a>
+					<a href="#">
+						<img src="img/tw.png" >
+					</a>
+				</div>
+				<h2 class="nl">Newsletter</h2>
+				<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium</p>
+				<form action="#" >
+					<input type="text" class="txt" placeholder="your email address"/>
+					<button class="btn">Subscribe</button>
+				</form>
+			</div>
+			<div class="middle">
+				<!-- 小标题 -->
+				<h2>Contact</h2>
+				<!-- 表单 -->
+				<form action="#" >
+					<!-- text和设计图中的外观不一样，显然是使用了背景图片作为text的样式 -->
+					<!-- placeholder 可以设置提示文字 ie8及以下不支持，需要用JS兼容ie8-->
+					<input type="text" class="txt" placeholder="your name"/>
+					<input type="text" class="txt" placeholder="your email address"/>
+					<textarea class="tarea" placeholder="message"></textarea>
+					<button class="btn">Send in</button>
+				</form>
+			</div>
+			<div class="right">
+				<h2>News Updates</h2>
+				<p>
+					<img src="img/1.png" >
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				</p>
+				<p>
+					<img src="img/2.png" >
+					Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+				</p>
+				<p>
+					<img src="img/3.png" >
+					At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.
+				</p>
+				<button class="btn">Visit our Blog</button>
+			</div>
+		</div>
+		<!-- contact -->
+		
+		<!-- footer -->
+		<div class="footer">
+			<div class="w">
+				<p>Copyright 2010. Studio VIVROCKS. All Rights Reserved.</p>
+				<p>Site Powered by Wordpress. Design and Developed by VIVROCKS.</p>
+				<p><a href="#">Home</a> |<a href="#">About</a>  |<a href="#">Products</a>  |<a href="#">Services</a>  |<a href="#">Contact</a> </p>
+				<p>rivacy Policy | Terms of use</p>
+			</div>
+		</div>
+		<!-- footer 结束 -->
+	</body>
+</html>

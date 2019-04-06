@@ -1,0 +1,298 @@
+/* 编辑主页面的演示表 */
+
+/* 高度塌陷常用css */
+.clearfix:before,
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* 设置body */
+body{
+	/* 背景图片，水平方向重复 */
+	background: url(../img/bd-bg.png) repeat-x;
+	/* 测试用 尺寸 */
+	/* height: 5000px; */
+}
+/* 页面内容区宽度固定，水平居中 */
+.w{
+	width:940px;
+	margin: 0 auto;
+}
+/* header */
+.header{
+	/* 测试用 背景色 */
+	/* background: papayawhip; */
+	/* 合并设置内边距 */
+	padding: 37px 0 46px;
+}
+.logo{
+	/* logo右移 如果设置header的内边距，header会被撑大，所以设置logo的margin */
+	margin-left: 15px;
+}
+.nav{
+	/* 导航条向右浮动 */
+	float: right;
+	/* 调整导航条位置，设置上外边距 */
+	margin-top: 22px;
+}
+.nav li{
+	float: left;
+	/* li间距 */
+	padding: 0 10px;
+	/* li间竖线 */
+	border-left: dotted #d6d6d6 1px;
+	/* li间竖线比文字高度长一点 */
+	padding-bottom: 8px;
+}
+/* 导航打标题 */
+.nav a{
+	/* ps中T选中文字后可以查看字体 */
+	font: bold 14px Georgia;
+	color: #666;
+	text-decoration: none;
+}
+/* 导航小标题 */
+.nav p{
+	/* chrome中，字体最小12px 1-11都显示位12px */
+	font: 12px Tahoma ;
+	color: #b7b7b7;
+}
+/* 导航条 鼠标移入效果 */
+.nav a:hover{
+	color: #c9c9c9;
+	text-decoration: underline;
+}
+/* banner */
+.banner{
+	/* 高度 */
+	height: 356px;
+	/* 底边阴影 */
+	background: url(../img/ban-bg.png) no-repeat bottom center;
+	/* 开启定位 */
+	position: relative;
+	/* 观察用 背景色 */
+	background-color: yellow;
+}
+/* banner图片切换导航按钮 */
+.pointerDiv a{
+	/* 浮动直接变block 因为inline-block计算空格，所以通常不用inlineblock */
+	float: left;
+	width: 17px;
+	height: 17px;
+	background: url(../img/pointer.png) no-repeat;
+	margin-left: 4px;
+}
+.pointerDiv .active,
+.pointerDiv a:hover{
+	background: url(../img/poiner-active.png) no-repeat;
+}
+/* 移动图片导航条的位置 */
+.pointerDiv{
+	position: absolute;
+	left: 15px;
+	bottom: 22px;
+}
+
+/* content部分 */
+.content{
+	/* 测试用 背景色 */
+	/* background: red; */
+}
+.content h1{
+	/* 文本居中 */
+	text-align: center;
+	font: bold 24px Georgia ;
+	/* 调整文字与上部距离 */
+	padding-top: 6px;
+	/* 线形背景图片 */
+	background: url(../img/line.png) no-repeat bottom center;
+	padding-bottom: 20px;
+	/* 设置标题与内容之间的距离 */
+	margin-bottom: 38px;
+}
+/* 中间三个div */
+.content .left,.content .middle,.content .right,
+.contact .left,.contact .middle,.contact .right{
+	/* 向左浮动 */
+	float: left;
+	/* 测试用 高度 */
+	/* height: 100px; */
+	width: 300px;
+	/* 测试用背景色 */
+	/* background-color: yellowgreen; */
+}
+/* 三个div之间的间隔 给中间的加两侧外边距 */
+.content .middle,.contact .middle{
+	margin: 0 20px;
+}
+/* 设置子div中的文字 */
+.content h2{
+	font: 21px georgia;
+	color: #11719e;
+}
+.content h3{
+	font: 12px helvetica;
+	color: #8c8c8c;
+}
+.content .imgDiv{
+	width: 299px;
+	height: 190px;
+	background: url(../img/img-bg.png) no-repeat;
+	margin: 16px 0 10px 0;
+	/* 图片水平居中 */
+	text-align: center;
+	/* 竖直居中 这里加了padding 撑大了imgDiv的可见区域 需要在原尺寸上做补偿 */
+	padding-top: 12px;
+}
+/* 这只介绍文字的高度范围 */
+.content p{
+	height: 92px;
+	color: #3e3e3e;
+	font: 13px helvetica;
+	/* 设置单词间距离 */
+	word-spacing: 2px;
+}
+/* 设置超链接模拟按钮 */
+.content .aBtn{
+	display: block;
+	width: 163px;
+	height: 40px;
+	background: url(../img/btn1.png) no-repeat;
+	text-decoration: none;
+	color: #016999;
+	/* font：字体大小/行高 */
+	font: 12px/40px helvetica;
+	/* 文字首行缩进 */
+	text-indent: 1em;
+	margin-bottom: 35px;
+}
+.contact .left,.contact .middle,.contact .right{
+	/* height: 300px; */
+	/* 测试用 背景色 */
+	/* background: yellow; */
+}
+/* contact */
+.contact .txt{
+	/* 表单项inline-block */
+	width: 276px;
+	height: 33px;
+	background: url(../img/text-gb.png) no-repeat;
+	/* 清除默认自带的边框 */
+	border: none;
+	/* 不同浏览器的input默认 margin padding 都不一样 需要先清除 */
+	padding: 0;
+	margin: 0;
+	/* 设置间隔距离 */
+	margin-bottom: 16px;
+	/* 当默认padding被清除后，输入内容会贴边显示，但是人为添加内边距又会影响可见尺寸，需要做步长 */
+	padding: 0 10px;
+	/* 在ie中，文字没有默认竖直居中 */
+	line-height: 33px;
+}
+.contact .tarea{
+	width: 276px;
+	height: 114px;
+	background: url(../img/textarea-bg.png) no-repeat;
+	border: none;
+	/* textarea 在ie中会自带滚动条 需要取出 */
+	overflow: auto;
+	/* textarea 默认大小可调 需要关闭 */
+	resize: none;
+	/* 不同浏览器的input默认 margin padding 都不一样 需要先清除 */
+	padding: 0;
+	margin: 0;
+	/* 当默认padding被清除后，输入内容会贴边显示，但是人为添加内边距又会影响可见尺寸，需要做步长 */
+	padding:10px;
+}
+.contact .btn{
+	width: 163px;
+	height: 32px;
+	background: url(../img/btn2.png) no-repeat;
+	border: none;
+	/* 不同浏览器的button默认 margin padding 都不一样 需要先清除 */
+	padding: 0;
+	margin: 0;
+	/* 设置按钮间隔 */
+	margin:12px 0 23px ;
+	/* 按钮文字 */
+	font: 13px georgia;
+	color: white;
+	/* button 文字默认居中 */
+	text-align: left;
+	text-indent: 1em;
+	/* 指针样式 */
+	cursor: pointer;
+}
+/* 小标题 */
+.contact h2{
+	color: #444;
+	/* 不同浏览器行高不统一 */
+	font: 18px/1 georgia;
+	padding: 44px 0 10px;
+	border-bottom: dashed 1px #d3d3d3;
+	margin-bottom: 15px;
+}
+.contact{
+	background: url(../img/line.png) no-repeat top center ;
+}
+.contact .left p{
+	color: #444;
+	/* 不同浏览器行高不统一 */
+	font: 12px/1 helvetica;
+}
+.contact .icon{
+	/* 不同浏览器对于空格的显示效果不同，chrome要大一点，空格大小和fontsize相关 */
+	/* 使用font-size清除空格 */
+	/* 变为float也可以清除空格，但是需要给父容器清除浮动防止塌陷 */
+	font-size: 0;
+	/* 图层默认大小不统一，导致图片排列不整齐 */
+}
+.contact .left .nl{
+	font: bold 18px "gill sans mt";
+	padding:38px 0 10px; 
+}
+.contact .left .txt{
+	margin: 6px 0 0 0;
+}
+.contact .right img{
+	float: left;
+	margin-right: 8px;
+}
+.contact .right p{
+	color: #444;
+	font: 12px/1 helvetica;
+	/* 固定高度 和图片同高 */
+	height: 58px;
+	border-bottom: dashed 1px #d3d3d3;
+	margin-bottom:14px ;
+	padding-bottom: 9px;
+}
+.contact .right p:last-of-type{
+	margin-bottom: 0;
+}
+.footer{
+	height: 173px;
+	border-top: 5px #4c4c4c solid;
+	background-color: #333333;
+	padding: 18px;
+}
+.footer a,.footer p{
+	color: #999;
+	font: 12px helvetica;
+	text-decoration: none;
+}
+.footer p:first-of-type{
+	float: right;
+}
+.footer p{
+	margin: 0 23px 8px 8px;
+}
+.footer a:hover{
+	color: #B7B7B7;
+	text-decoration: underline;
+}
+
+
+
