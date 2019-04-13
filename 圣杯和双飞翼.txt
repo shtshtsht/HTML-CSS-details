@@ -1,0 +1,32 @@
+圣杯布局
+
+html按照书写顺序解析。
+为了让主要内容能够优先加载，center部分写在最前面
+令父元素为div，则div包含center、left和right三个子元素
+
+步骤：
+1、用父元素左右padding为定宽的left和right挤出预留空间
+2、center的width默认自动，自动充满父元素空间
+3、三列左浮动，脱离普通文档流
+4、对left操作，用margin-left：-100%，使其回归父元素content区域左上起点位置。
+	用relative定位使其向左移动自身宽度，占据padding区域预留位置。
+5、对right操作，用margin-left：-自身宽度，实现与前两列同行。
+	用relative向右移动，使其占据padding预留位置。
+6、实现伪等高
+	三列元素的实际高度都由自身内容撑开，所以会出现高低不同的情况。
+	父元素的高度由三列中最大的那个撑开，较短列下方会出现空隙。
+	取一大数N，设置padding-bottom：N；   margin-bottom：-N；
+	父元素的高度由子元素的margin外边界计算，所以此时父元素的高度不变。
+	子元素的可见高度包含padding区域，所以三个子元素center、left、right的实际可见区域均已超出父元素区域。
+	再利用父元素overflow：hidden；设置溢出隐藏，即可实现视觉上的等高效果。
+
+****************************************************************
+双飞翼布局
+
+基本思路和圣杯布局相似，区别在于如何得到center空间。
+
+双飞翼布局中，给center额外套了一个小盒子div1，让left、right和小盒子div1同层浮动。
+这样通过给center列单独设置padding就能给left和right列预留空间。
+同时，由于left、right和小盒子div1同层浮动，整体父元素div没有设置padding，
+left和right的归位动作省去了relative定位操作。
+
