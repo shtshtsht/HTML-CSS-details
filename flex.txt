@@ -1,0 +1,102 @@
+弹性盒子 
+display：flex；
+
+用于：
+1、在父容器里面垂直居中一个块元素
+2、使容器的所有子项占用等量的可用高/宽
+3、使多列布局中的不同列具有相同高度
+
+**************************************
+主轴 main axis：
+	沿着flex元素放置方向延伸的轴
+	开始 main start 
+	结束 main end
+交叉轴 cross axis：
+	垂直于flex元素放置方向的轴
+	开始 cross start 
+	结束 cross end
+flex项：
+	父元素设置了flex，则其子元素就是flex item
+
+*******************************************
+flex-direction
+设置主轴方向
+
+可选值：
+1、row：默认值，按浏览器的默认语言方向排列，中/英均是从左到右
+2、column：把主轴变为纵向，默认从上到下
+3、row-reverse：从右到左
+4、column-reverse：从下到上
+
+*************************************
+flex-wrap
+设置换行方式
+
+当设定了宽/高的flex item 被摆放到一行/列，可能溢出flex容器。
+
+可选值：
+1、nowrap：默认值，无换行，可能会溢出
+2、warp：沿cross轴向换行
+3、wrap-reverse：反转cross轴向，换行
+
+*************************************
+flex-flow缩写
+用于缩写主轴方向和换行方式
+
+flex-flow：轴向 换行方式；
+
+*************************************
+flex
+设置于子元素
+设置 flex item 的动态尺寸
+当子元素直接设置width和height时，子元素不是一个flex项
+
+flex是flex-grow flex-shrink flex-basis三个属性的简写
+三个属性均可缺省
+
+flex-grow：
+	flex item 的拉伸因子，无单位正值，默认1
+	表示该flex项相对于其他设置了flex属性的flex项目的扩展比例
+flex-shrink：
+	flex项仅在宽度之和大于父元素时才会发生收缩，
+	收缩计算比例，无单位正值，默认1
+flex-basis：
+	flex项的初始尺寸。
+
+flex值：
+1、单值：
+	无单位正值，被当作grow值
+	有效的宽度width，被当作basis值
+	auto：1 1 auto
+	initial: 0 1 auto
+	none: 0 0 auto
+2、双值：
+	第一个值：grow值
+	第二个值：
+		可以是一个无单位正值：被当作shrink值。
+		也可以是一个有效的宽度值: 被当作basis值。
+3、三值：
+	grow，shrink，basis顺序
+	
+注意：
+	grow和shrink均有默认值1，basis默认值为auto
+	
+*************************************
+align-self
+align-items
+设置 flex item 在侧轴方向的排列方式
+垂直对齐
+可得到垂直居中等效果
+
+*************************************
+justify-content
+设置 flex item 在主轴方向的排列方式
+水平对齐
+
+*************************************
+order
+改变 flex 项的排列顺序
+所有flex项的默认order都是0
+order值大的排在后面
+order值相等，按html书写顺序显示
+可以是负值
